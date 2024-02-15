@@ -1,43 +1,46 @@
-# zomaika 
+##Zomaika E-commerce Project
+##Overview
+##Welcome to the Zomaika E-commerce Project! This project aims to create a robust e-commerce platform for handloom products. Below, ##you'll find information about the technologies used, team members, and details on the Azure services integration.
 
-Overview
-Welcome to our Handloom E-commerce Platform! This platform is dedicated to showcasing and selling high-quality handloom products, celebrating craftsmanship, and supporting artisan communities. This README file provides essential information to get you started with our platform.
+##Table of Contents
+##Technologies Used
+##Team Members
+##Azure Services Integration
+##Contribution Guidelines
+##Cloud Deployment
+##Monitoring
+##Technologies Used
+##Frontend:
 
-Table of Contents
-Getting Started
-Features
-Installation
-Usage
-Contributing
-Support
-License
-Getting Started
-Visit our website to explore our handpicked collection of handloom products. Register an account to enjoy a personalized shopping experience. Browse through categories, add items to your cart, and proceed to a secure checkout process.
+##HTML
+##CSS
+##JavaScript
+##Bootstrap
+##Backend:
 
-Features
-Extensive Product Range: Explore a diverse range of handloom products, from clothing and accessories to home decor items.
-Secure Checkout: Experience a seamless and secure checkout process with various payment options.
-Artisan Profiles: Learn about the talented artisans behind each product and their unique stories.
-Responsive Design: Enjoy a user-friendly and visually appealing experience on desktop and mobile devices.
-International Shipping: We offer worldwide shipping to bring handloom craftsmanship to a global audience.
-Ethical and Sustainable: Our platform emphasizes ethical practices and supports sustainable handloom production.
-Installation
-No installation is required for users accessing the platform through a web browser. For administrators and developers, refer to our developer documentation for details on customization and integration.
+Python
+Flask
+SQLite
+Team Members
+Dharanidharan Cloud Deployment
+Ajith AS Frontend Developer
+Ganapathy Raja M Backend Developer
+Lakshanaiya Tester
+Azure Services Integration
+This project leverages various Azure services to ensure scalability, reliability, and performance.
 
-Usage
-User Registration: Create an account to access personalized features, track orders, and receive updates.
-Browsing Products: Explore handloom products by category, type, or artisan. Use the search bar for specific items.
-Shopping Cart: Add desired items to your cart, review your order, and proceed to checkout.
-Checkout Process: Provide shipping details, choose a payment method, and confirm your order.
-Order Tracking: Track the status of your order through your account dashboard.
-Feedback and Reviews: Share your experiences and provide feedback on purchased items.
-Contributing
-We welcome contributions from the community. If you have suggestions, found a bug, or want to contribute new features, please refer to our contribution guidelines.
+Resource Group: Organizes and manages Azure resources efficiently.
+Virtual Network: Provides a secure and isolated network environment for the project.
+Web App: Hosts the e-commerce platform using Flask for the backend and HTML/CSS/JS for the frontend.
+Virtual Network Integration: Ensures secure communication between the web app and other Azure resources.
+Monitor: Monitors the performance and health of the application, helping in proactive issue resolution.
+Contribution Guidelines
+We welcome contributions from the community to enhance and improve the Zomaika E-commerce Project. If you want to contribute, please follow the guidelines outlined in the CONTRIBUTING.md file.
 
-Support
-For any issues or inquiries, contact our support team at support@handloomplatform.com or visit our FAQ page.
+Cloud Deployment
+The cloud deployment is managed by Dharanidharan, who oversees the deployment of the project on Azure services. For deployment instructions and guidelines, refer to the DEPLOYMENT.md file.
 
-License
-This Handloom E-commerce Platform is licensed under the MIT License.
+Monitoring
+The project's health and performance are monitored using Azure Monitor. This includes tracking application insights, logging, and setting up alerts for any potential issues. For monitoring details, please see MONITORING.md.
 
-Feel free to add or modify sections based on your specific needs. Make sure to provide accurate and up-to-date information to help users and contributors effectively engage with your handloom e-commerce platform.
+Feel free to customize the sections and add more details based on your project's specifics. Providing comprehensive information in your README file helps team members and contributors understand the project and its components.
