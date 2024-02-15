@@ -25,8 +25,11 @@ Flask
 SQLite
 ## Team Members
 Dharanidharan Cloud Deployment
+
 Ajith AS Frontend Developer
+
 Ganapathy Raja M Backend Developer
+
 Lakshanaiya Tester
 ## Azure Services Integration
 This project leverages various Azure services to ensure scalability, reliability, and performance.
