@@ -5,9 +5,9 @@
 This project aims to create a robust e-commerce platform for handloom products. Below, you'll find information about the technologies used, team members, and details on the Azure services integration.
 
 ## Table of Contents
-##Technologies Used
-##Team Members
-##Azure Services Integration
+## Technologies Used
+## Team Members
+## Azure Services Integration
 ##Contribution Guidelines
 ##Cloud Deployment
 ##Monitoring
