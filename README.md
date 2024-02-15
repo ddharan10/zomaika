@@ -1,4 +1,5 @@
-##Zomaika E-commerce Project
+## Zomaika E-commerce Project
+
 ##Overview
 ##Welcome to the Zomaika E-commerce Project! This project aims to create a robust e-commerce platform for handloom products. Below, ##you'll find information about the technologies used, team members, and details on the Azure services integration.
 
