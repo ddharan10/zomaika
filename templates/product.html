@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomaika</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+    <!-- python api -->
+    <link rel="icon"href="{{ url_for('static', filename='bootstrap-5.3.2-dist/assets/image/logo1.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css') }}">
+</head>
+<body>
+    
+
+    <div class="chat-container">
+        <a href="/chat" class="chatBtn"> <svg height="2em" fill="white" xml:space="preserve" viewBox="0 0 1000 1000" y="0px" x="0px" version="1.1">
+         <path d="M881.1,720.5H434.7L173.3,941V720.5h-54.4C58.8,720.5,10,671.1,10,610.2v-441C10,108.4,58.8,59,118.9,59h762.2C941.2,59,990,108.4,990,169.3v441C990,671.1,941.2,720.5,881.1,720.5L881.1,720.5z M935.6,169.3c0-30.4-24.4-55.2-54.5-55.2H118.9c-30.1,0-54.5,24.7-54.5,55.2v441c0,30.4,24.4,55.1,54.5,55.1h54.4h54.4v110.3l163.3-110.2H500h381.1c30.1,0,54.5-24.7,54.5-55.1V169.3L935.6,169.3z M717.8,444.8c-30.1,0-54.4-24.7-54.4-55.1c0-30.4,24.3-55.2,54.4-55.2c30.1,0,54.5,24.7,54.5,55.2C772.2,420.2,747.8,444.8,717.8,444.8L717.8,444.8z M500,444.8c-30.1,0-54.4-24.7-54.4-55.1c0-30.4,24.3-55.2,54.4-55.2c30.1,0,54.4,24.7,54.4,55.2C554.4,420.2,530.1,444.8,500,444.8L500,444.8z M282.2,444.8c-30.1,0-54.5-24.7-54.5-55.1c0-30.4,24.4-55.2,54.5-55.2c30.1,0,54.4,24.7,54.4,55.2C336.7,420.2,312.3,444.8,282.2,444.8L282.2,444.8z"></path>
+         </svg><span class="tooltip">chatbot</span></a>
+     </div>
+ 
+     <!-- main-nav-section start -->
+     <div class="main-section">
+
+        <header class="header">
+          <div class="container">
+            <div class="row"> 
+              <div class="col-lg-2 col-md-12">
+                 <div class="header-logo">
+                    <img
+                    src="{{ url_for('static', filename='bootstrap-5.3.2-dist/assets/image/logo.png') }}"
+                    class="img-logo"
+                    alt=""
+                  />
+                     <a href="#"style="text-decoration:none">Zomaika</a>
+                 </div>
+ 
+               </div>
+               <div class="col-lg-8 col-md-12">
+                 <nav class="header-menu">
+                     <ul>
+                         <li class="active"> <a href="/" >Home</a></li>
+                         <!-- <li> <a href="index.html">About</a></li>
+                         <li> <a href="index.html">Services</a></li>
+                         <li> <a href="index.html">Product</a></li>
+                         <li> <a href="index.html">Blog</a></li>
+                         <li> <a href="index.html">Contact</a></li> -->
+                         <li> <div class="cart">
+                            <a  onclick="buynow()"><i class="fa fa-shopping-cart "></i><span class="badge" style="background-color: #000;border-radius: 100%;" id="cartincrement">0</span></a>
+                         </div>
+                     </li>
+                     </ul>
+                 </nav>
+               </div>
+               <div class="col-lg-2 col-md-12">
+                 <div class="header-login">
+                     <div class="header-login-btn">
+                         <a href="/login">login</a>
+                         <a href="/signup">Register</a>
+                     </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </header>
+         <!-- main-nav-section end -->
+      
+        
+
+           <!-- product section start -->
+      <section class="product-section">
+            <div class="heading-container text-center">
+                    <h2>Our <span>Product</span></h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                    <button class="option1" onclick="incrementButton()">Add to cart</button>
+                                     <a href="" class="option2" onclick="buynow()">Buy Now</a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <img src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/3xl-13-lstr-wine-vtexx-original-imagnzbummhkgr7p.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Men's Shirt</h5>
+                                <h6>₹666.0</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- c2 -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                     <button class="option1" onclick="incrementButton()">Add to cart</button>
+                                      <a href="" class="option2" onclick="buynow()">Buy Now</a>
+                                    
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <img src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/l-new-formal-eviqe-original-imagw5t6nw5fm7mz.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Men's Shirt</h5>
+                                <h6>₹666.0</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                     <button class="option1" onclick="incrementButton()">Add to cart</button>
+                                     <a href="" class="option2" onclick="buynow()">Buy Now</a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <img src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/2xl-shirt-20-2xl-jaipur-textile-hub-original-imag5azkebsdneth.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Men's Shirt</h5>
+                                <h6>₹666.0</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                     <button class="option1" onclick="incrementButton()">Add to cart</button>
+                                      <a href="" class="option2" onclick="buynow()">Buy Now</a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <img src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/-original-imagrfrsvvcezxzm.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Men's Shirt</h5>
+                                <h6>₹666.0</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                     <button class="option1" onclick="incrementButton()">Add to cart</button>
+                                      <a href="" class="option2" onclick="buynow()">Buy Now</a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <img src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/l-jf-kurti-maroon-jaimit-fashion-original-imagdyv72bpkh4yb.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Men's Shirt</h5>
+                                <h6>₹666.0</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                     <button class="option1" onclick="incrementButton()">Add to cart</button>
+                                      <a href="" class="option2" onclick="buynow()">Buy Now</a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <img src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/xxl-kurta-ana-somapah-original-imagupvwacgbnmkf.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Men's Shirt</h5>
+                                <h6>₹666.0</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                     <button class="option1" onclick="incrementButton()">Add to cart</button>
+                                      <a href="" class="option2" onclick="buynow()">Buy Now</a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <img src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/free-gp-24-green-art-silk-designer-bollywood-fashion-style-original-imagphr9ezwm2tgy.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Men's Shirt</h5>
+                                <h6>₹666.0</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                     <button class="option1" onclick="incrementButton()">Add to cart</button>
+                                      <a href="" class="option2" onclick="buynow()">Buy Now</a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <img src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/free-sleeveless-indra-purvaja-original-imagqaz6d9he5q3z.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Men's Shirt</h5>
+                                <h6>₹666.0</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="box">
+                        <div class="option-container">
+                            <div class="options">
+                                 <button class="option1" onclick="incrementButton()">Add to cart</button>
+                                  <a href="" class="option2" onclick="buynow()">Buy Now</a>
+                            </div>
+                        </div>
+                        <div class="img-box">
+                            <img src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/free-sutex-rama-navy-blue-bhuva-brothers-unstitched-original-imagc3h3ftgqufwf.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>Men's Shirt</h5>
+                            <h6>₹666.0</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="box">
+                        <div class="option-container">
+                            <div class="options">
+                                 <button class="option1" onclick="incrementButton()">Add to cart</button>
+                                  <a href="" class="option2" onclick="buynow()">Buy Now</a>
+                            </div>
+                        </div>
+                        <div class="img-box">
+                            <img src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/xs-23516o-libas-original-imagezz95kmbprf3.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>Men's Shirt</h5>
+                            <h6>₹666.0</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="box">
+                    <div class="option-container">
+                        <div class="options">
+                             <button class="option1" onclick="incrementButton()">Add to cart</button>
+                              <a href="" class="option2" onclick="buynow()">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <img src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/xl-ku632lgn-mokshi-original-imag4nmvvfny6vyf.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>Men's Shirt</h5>
+                        <h6>₹666.0</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="box">
+                    <div class="option-container">
+                        <div class="options">
+                             <button class="option1" onclick="incrementButton()">Add to cart</button>
+                              <a href="" class="option2" onclick="buynow()">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <img src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/free-sari-fabwoman-unstitched-original-imagcztprwg9dgvz.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>Men's Shirt</h5>
+                        <h6>₹666.0</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="box">
+                    <div class="option-container">
+                        <div class="options">
+                             <button class="option1" onclick="incrementButton()">Add to cart</button>
+                              <a href="" class="option2" onclick="buynow()">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <img src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/free-s-1120-twixxle-unstitched-original-imagphzyz6kkd9hr.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>Add to cart</h5>
+                        <h6>₹666.0</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="box">
+                    <div class="option-container">
+                        <div class="options">
+                             <button class="option1" onclick="incrementButton()">Add to cart</button>
+                              <a href="" class="option2" onclick="buynow()">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <img src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/free-karishma-gold-pink7-silknest-unstitched-original-imagfffd4def7syt.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>Add to cart</h5>
+                        <h6>₹666.0</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="box">
+                    <div class="option-container">
+                        <div class="options">
+                             <button class="option1" onclick="incrementButton()">Add to cart</button>
+                              <a href="" class="option2" onclick="buynow()">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <img src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/free-37651-mirchi-fashion-unstitched-original-imaghgheha8dungh.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>Add to cart</h5>
+                        <h6>₹666.0</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="box">
+                    <div class="option-container">
+                        <div class="options">
+                             <button class="option1" onclick="incrementButton()">Add to cart</button>
+                             <button class="option2" onclick="buynow()">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <img src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>Add to cart</h5>
+                        <h6>₹666.0</h6>
+                    </div>
+                </div>
+            </div>
+           
+
+         </section><br>
+
+      <!-- product section end -->
+       
+
+       
+
+
+      <!-- copy-right section start -->
+      <div class="copy-right">
+        <p>@ 2024 All Right Reserved By <a href="#">Zomaika</a></p>
+      </div>
+      <!-- copy-right section end -->
+
+          <!-- scripts -->
+          <script src="{{ url_for('static', filename='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js') }}	"></script>
+          <script src="{{ url_for('static', filename='bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js') }}"></script>
+
+           <!-- python_flask -->
+         <script src="{{ url_for('static', filename='main.js') }}"></script>
+          <!-- scripts -->
+     
+    
+</body>
+</html>

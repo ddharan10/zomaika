@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='chat.css')}}">
+    <script src="https://kit.fontawesome.com/92d702ffd8.js"></script>
+</head>
+<body>
+
+      <div class="placeorder" id="placeorder">
+          <h4>your order has been placed..</h4>
+          
+            <div class="checkbox-wrapper-12">
+              <div class="cbx">
+                <input checked="" type="checkbox" id="cbx-12">
+                <label for="cbx-12"></label>
+                <svg fill="none" viewBox="0 0 15 14" height="14" width="15">
+                  <path d="M2 8.36364L6.23077 12L13 2"></path>
+                </svg>
+              </div>
+              
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <filter id="goo-12">
+                    <feGaussianBlur result="blur" stdDeviation="4" in="SourceGraphic"></feGaussianBlur>
+                    <feColorMatrix result="goo-12" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" mode="matrix" in="blur"></feColorMatrix>
+                    <feBlend in2="goo-12" in="SourceGraphic"></feBlend>
+                  </filter>
+                </defs>
+              </svg>
+            </div>
+          
+      </div>
+            <!-- cart section start -->
+      <div class="container">
+        <div class="container-form">
+        <h1>Shipping</h1>
+        <p>Please enter your order details.</p>
+        <hr />
+       
+        <div class="form">
+          
+        <div class="fields fields--2">
+          <label class="field">
+            <span class="field__label" for="firstname">First name</span>
+            <input class="field__input" type="text" id="firstname" name="firstname" required />
+          </label>
+          <label class="field">
+            <span class="field__label" for="lastname">Last name</span>
+            <input class="field__input" type="text" id="lastname" name="lastname" />
+          </label>
+        </div>
+        <label class="field">
+          <span class="field__label" for="address">Address</span>
+          <input class="field__input" type="text" id="address" name="address" />
+        </label>
+        <label class="field">
+          <span class="field__label" for="country">Country</span>
+          <select class="field__input" id="country" name="country">
+            <option value=""></option>
+            <option value="india">India</option>
+          </select>
+        </label>
+        <div class="fields fields--3">
+          <label class="field">
+            <span class="field__label" for="zipcode">Zip code</span>
+            <input class="field__input" type="text" id="zipcode"  name="zipcode" />
+          </label>
+          <label class="field">
+            <span class="field__label" for="city">City</span>
+            <input class="field__input" type="text" id="city" name="city" />
+          </label>
+          <label class="field">
+            <span class="field__label" for="state">State</span>
+            <select class="field__input" id="state" name="state">
+              <option value=""></option>
+              <option value="Tamilnadu">Tamilnadu</option>
+            </select>
+          </label>
+        </div>
+        </div>
+        
+        <hr>
+        <a href="/client" onclick="placeorder()"><input type="text" class="orderbutton" value="Place order"></a>
+    </div>
+      </div>
+      <script src="../static/main.js"></script>
+    
+</body>
+</html>

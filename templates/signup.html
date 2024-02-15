@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zomaika</title>
+    <link rel="icon" href="{{ url_for('static', filename='bootstrap-5.3.2-dist/assets/image/logo1.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <link href="{{ url_for('static', filename='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css') }}" rel='stylesheet'>
+  </head>
+  <body>
+    <div class="wrapper">
+    <form class="modal-content animate"  method="POST" action="/signup" autocomplete="off">
+      <h2>Signup</h2>
+      <div class="input-box">
+        
+        <input type="text" placeholder="Enter the Name" name="username" required />
+        <i class='bx bxs-user'></i>
+    
+      
+      </div>
+      <div class="input-box">
+        <input type="email" placeholder="Email" name="email" required />
+        <i class='bx bx-envelope' ></i>
+       
+    
+      
+      </div>
+      <div class="input-box"> <input type="password" placeholder="Create New Password" name="password" required />
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <!-- <div class="input-box"> <input type="password" placeholder="Confirm Password" required />
+        <i class='bx bxs-lock-alt'></i>
+      </div> -->
+      
+      
+     <button type="submit" class="btn">Sign up</button>
+      <div class="register">
+        <p>Do have an account?<a href="/login"> Login</a></p>
+      </div>
+    </form>
+    </div>
+    <script>
+      $(document).ready(function(){
+        $("form").attr("autocomplete","off");
+      });
+    </script>
+  </body>
+</html>

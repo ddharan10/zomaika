@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(bootstrap-5.3.2-dist/assets/image/shopping1.png);
+  /* background-color: #e2dcdc; */
+  background-size: cover;
+  background-position: center;
+}
+.wrapper {
+  width: 420px;
+  
+  background-color: #4f2777;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba (0, 0, 0, 0.2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+.wrapper h2 {
+  font-size: 36px;
+  text-align: center;
+}
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 11px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder {
+  color: #fff;
+}
+.input-box i {
+  color: #fff;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+  accent-color: #fff;
+  margin-right: 3px;
+}
+.remember-forgot a {
+  color: #fff;
+  text-decoration: none;
+}
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+.wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  transition:all 0.5s;
+}
+.wrapper button:hover{
+  background-color: #ff5903;
+  color: #fff;
+  border-color: #fff;
+  outline-color: #fff;
+}
+.wrapper .register {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+.register p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register a:hover {
+  color: purple;
+  text-decoration: underline;
+}
+
+
+
+/* message */
+.alert{
+  
+  height: 40px;
+  text-align: center;
+  padding: 10px 0px ;
+  background-color: #fff;
+  z-index: 999;
+  opacity: 0;
+  animation: slideUp 4s ease forwards,floatImage 4s ease-out  ;
+  animation-delay: .5s ,1.5s;
+
+}
+
+.alert-success{
+  background: rgb(157, 237, 157);
+  box-shadow: 2px 5px 5px rgb(175, 231, 203);
+  
+  color: green;
+}
+
+.alert-danger {
+  background: rgb(238, 198, 198);
+  box-shadow: 2px 5px 5px rgb(231, 175, 175);
+  color: red;
+ 
+}
+
+
+/* keyframes */
+
+@keyframes slideUp{
+  50% {
+  opacity: 1;
+  transform: translateY(10px);
+  }
+  0% {
+  opacity:0 ;
+  transform: translateY();
+  }
+}

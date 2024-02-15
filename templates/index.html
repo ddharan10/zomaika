@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zomaika</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="chat.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- python api -->
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='bootstrap-5.3.2-dist/assets/image/logo1.png') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+  
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css') }}">
+  </head>
+  <body>
+    
+  
+    <div class="chat-container">
+      <a href="/chat" class="chatBtn">
+        <svg
+          height="2em"
+          fill="white"
+          xml:space="preserve"
+          viewBox="0 0 1000 1000"
+          y="0px"
+          x="0px"
+          version="1.1"
+        >
+          <path
+            d="M881.1,720.5H434.7L173.3,941V720.5h-54.4C58.8,720.5,10,671.1,10,610.2v-441C10,108.4,58.8,59,118.9,59h762.2C941.2,59,990,108.4,990,169.3v441C990,671.1,941.2,720.5,881.1,720.5L881.1,720.5z M935.6,169.3c0-30.4-24.4-55.2-54.5-55.2H118.9c-30.1,0-54.5,24.7-54.5,55.2v441c0,30.4,24.4,55.1,54.5,55.1h54.4h54.4v110.3l163.3-110.2H500h381.1c30.1,0,54.5-24.7,54.5-55.1V169.3L935.6,169.3z M717.8,444.8c-30.1,0-54.4-24.7-54.4-55.1c0-30.4,24.3-55.2,54.4-55.2c30.1,0,54.5,24.7,54.5,55.2C772.2,420.2,747.8,444.8,717.8,444.8L717.8,444.8z M500,444.8c-30.1,0-54.4-24.7-54.4-55.1c0-30.4,24.3-55.2,54.4-55.2c30.1,0,54.4,24.7,54.4,55.2C554.4,420.2,530.1,444.8,500,444.8L500,444.8z M282.2,444.8c-30.1,0-54.5-24.7-54.5-55.1c0-30.4,24.4-55.2,54.5-55.2c30.1,0,54.4,24.7,54.4,55.2C336.7,420.2,312.3,444.8,282.2,444.8L282.2,444.8z"
+          ></path></svg><span class="tooltip">chatbot</span></a>
+    </div>
+
+    <!-- main section start -->
+    <div class="main-section">
+      <header class="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2 col-md-12">
+              <div class="header-logo">
+                <img
+                  src="{{ url_for('static', filename='bootstrap-5.3.2-dist/assets/image/logo.png') }}"
+                  class="img-logo"
+                  alt=""
+                />
+                <a href="#" style="text-decoration: none">zomaika</a>
+              </div>
+            </div>
+
+            <div class="col-lg-8 col-md-12">
+              <nav class="header-menu" id="nv-act ">
+                <ul>
+                  <li class="nav"><a href="/">Home</a></li>
+                  <li class="nav"><a href="#about">About us</a></li>
+                  <li class="nav"><a href="#services">Services</a></li>
+                  <li class="nav"><a href="#product">Product</a></li>
+                  <li class="nav"><a href="#contact">Contact</a></li>
+                  <li>
+                    <div class="cart">
+                      <a  onclick="buynow()"
+                        ><i class="fa fa-shopping-cart"></i
+                        ><span
+                          class="badge"
+                          style="background-color: #000; border-radius: 100%"
+                          id="cartincrement"
+                          >0</span
+                        ></a
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="col-lg-2 col-md-12">
+              <div class="header-login">
+                <div class="header-login-btn">
+                  <a href="/login">login</a>
+                  <a href="/signup">Register</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- slider section start -->
+      <section class="slider">
+        <div class="slider-bg-box">
+          <img
+            src="{{ url_for('static', filename='bootstrap-5.3.2-dist/assets/image/shopping1.png') }}"
+            alt=""
+          />
+        </div>
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6 col-md-10">
+                    <div class="detail-box">
+                      <h1><span> sale 20% off</span> on everything</h1>
+                      <p></p>
+                      <div class="btn-box">
+                        <a href="/product" class="btn1">Shop Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                        </div> -->
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6 col-md-10">
+                    <div class="detail-box">
+                      <h1><span> sale 20% off </span> on everything</h1>
+                      <p></p>
+                      <div class="btn-box">
+                        <a href="/product" class="btn1">Shop Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6 col-md-10">
+                    <div class="detail-box">
+                      <h1><span> sale 20% off</span> on everything</h1>
+                      <p></p>
+                      <div class="btn-box">
+                        <a href="/product" class="btn1">Shop Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- slider section end -->
+    </div>
+    <!-- main section end -->
+
+    <!-- info section start -->
+    <section class="feature-section padding-layout" id="services">
+      <div class="container">
+        <div class="heading-container text-center">
+          <h2>why shop with us</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <div class="box-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </div>
+              <div class="detail-box">
+                <h5>Fast Delivery</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                  ad mollitia fugit aliquam ea quasi alias exercitationem
+                  eligendi consequuntur quae.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <div class="box-icon">
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+              <div class="detail-box">
+                <h5>Free shipping</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                  ad mollitia fugit aliquam ea quasi alias exercitationem
+                  eligendi consequuntur quae.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <div class="box-icon">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+              <div class="detail-box">
+                <h5>Best Quality</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                  ad mollitia fugit aliquam ea quasi alias exercitationem
+                  eligendi consequuntur quae.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- info section end -->
+    <!-- cart section start -->
+    <!-- <div class="cart" id="cart">
+    <div class="listcart">
+        <img src="" alt="">
+        <div class="content">
+            <div class="name">
+                Product name
+            </div>
+            <div class="price">
+                product
+            </div>
+        </div>
+        <div class="quantity">
+            <button>-</button>
+            <span class="value">3</span>
+            <button>+</button>
+        </div>
+    </div>
+  </div>
+  <div class="buttons">
+    <div class="close">CLOSE</div>
+    <div class="checkout">CHECKOUT</div>
+  </div> -->
+    <!-- cart section start -->
+    <!-- what's new section start -->
+    <section class="arrival-section">
+      <div class="container">
+        <div class="box">
+          <div class="bg-img">
+            <!-- <img src="bootstrap-5.3.2-dist/assets/image/arrival11.png " alt=""> -->
+          </div>
+          <div class="row">
+            <div class="col-md-4 m-auto">
+              <div class="heading-container">
+                <h2>#NewArrivals</h2>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+                porro!
+              </p>
+              <a href="/product">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- what's new section end -->
+    <!-- product section start -->
+    <section class="product-section" id="product">
+      <div class="container">
+        <div class="heading-container text-center">
+          <h2>Our <span>Product</span></h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="box">
+              <div class="option-container">
+                <div class="options">
+                  <button class="option1" onclick="incrementButton()">
+                    Add to cart
+                  </button>
+
+                   <a href="#product" class="option2" onclick="buynow()">Buy Now</a>
+                </div>
+              </div>
+              <div class="img-box">
+                <img
+                  src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/men's shirt.png"
+                  alt=""
+                />
+              </div>
+              <div class="detail-box">
+                <h5>Men's Shirt</h5>
+                <h6>₹666.0</h6>
+              </div>
+            </div>
+          </div>
+          <!-- c2 -->
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="box">
+              <div class="option-container">
+                <div class="options">
+                  <button class="option1" onclick="incrementButton()">
+                    Add to cart
+                  </button>
+                   <a href="#product" class="option2" onclick="buynow()">Buy Now</a>
+                </div>
+              </div>
+              <div class="img-box">
+                <img
+                  src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/2xl-shirt-20-2xl-jaipur-textile-hub-original-imag5azkebsdneth.webp"
+                  alt=""
+                />
+              </div>
+              <div class="detail-box">
+                <h5>Men's Shirt</h5>
+                <h6>₹666.0</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="box">
+              <div class="option-container">
+                <div class="options">
+                  <button class="option1" onclick="incrementButton()">
+                    Add to cart
+                  </button>
+                   <a href="#product" class="option2" onclick="buynow()">Buy Now</a>
+                </div>
+              </div>
+              <div class="img-box">
+                <img
+                  src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/2xl-shirt-22-2xl-jaipur-textile-hub-original-imag5aybmahsy6wn.png"
+                  alt=""
+                />
+              </div>
+              <div class="detail-box">
+                <h5>Men's Shirt</h5>
+                <h6>₹666.0</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="box">
+              <div class="option-container">
+                <div class="options">
+                  <button class="option1" onclick="incrementButton()">
+                    Add to cart
+                  </button>
+                   <a href="#product" class="option2" onclick="buynow()">Buy Now</a>
+                </div>
+              </div>
+              <div class="img-box">
+                <img
+                  src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/2xl-shirt-32-2xl-jaipur-textile-hub-original-imag5b4eta4yb7fs.png"
+                  alt=""
+                />
+              </div>
+              <div class="detail-box">
+                <h5>Men's Shirt</h5>
+                <h6>₹666.0</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="box">
+              <div class="option-container">
+                <div class="options">
+                  <button class="option1" onclick="incrementButton()">
+                    Add to cart
+                  </button>
+                   <a href="#product" class="option2" onclick="buynow()">Buy Now</a>
+                </div>
+              </div>
+              <div class="img-box">
+                <img
+                  src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/free-black-yellow-handloom-4-sb-sabita-unstitched-original-imagfe9e4n4v9asp.png"
+                  alt=""
+                />
+              </div>
+              <div class="detail-box">
+                <h5>Black saree</h5>
+                <h6>₹666.0</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="box">
+              <div class="option-container">
+                <div class="options">
+                  <button class="option1" onclick="incrementButton()">
+                    Add to cart
+                  </button>
+                   <a href="#product" class="option2" onclick="buynow()">Buy Now</a>
+                </div>
+              </div>
+              <div class="img-box">
+                <img
+                  src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/free-handloom-khadi-cotton-matri-textile-unstitched-original-imaggtje9wmpgx9m.png"
+                  alt=""
+                />
+              </div>
+              <div class="detail-box">
+                <h5>Cotton Khadi</h5>
+                <h6>₹666.0</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="box">
+              <div class="option-container">
+                <div class="options">
+                  <button class="option1" onclick="incrementButton()">
+                    Add to cart
+                  </button>
+                   <a href="#product" class="option2" onclick="buynow()">Buy Now</a>
+                </div>
+              </div>
+              <div class="img-box">
+                <img
+                  src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/free-sf-604-divine-dust-unstitched-original-imagtynssfzbgjsw.png"
+                  alt=""
+                />
+              </div>
+              <div class="detail-box">
+                <h5>Saree</h5>
+                <h6>₹140.0</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="box">
+              <div class="option-container">
+                <div class="options">
+                  <button class="option1" onclick="incrementButton()">
+                    Add to cart
+                  </button>
+                   <a href="#product" class="option2" onclick="buynow()">Buy Now</a>
+                </div>
+              </div>
+              <div class="img-box">
+                <img
+                  src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/girls-college-sde-bag-stylish-trendy-crossbody-sling-bags-for-original-imageq4q35atdxhj.png"
+                  alt=""
+                />
+              </div>
+              <div class="detail-box">
+                <h5>Men's Shirt</h5>
+                <h6>₹666.0</h6>
+              </div>
+            </div>
+          </div>
+
+          <!-- c2-end -->
+        </div>
+        <div class="btn-box">
+          <a href="/product">View All Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- product section end -->
+    <!-- subscribe section start -->
+    <section class="subscribe-section">
+      <div class="container-fluid">
+        <div class="box">
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="subscribe-form">
+                <div class="heading-container text-center">
+                  <h3>Subscribe To Get Disscount Offers</h3>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
+                  rerum!
+                </p>
+                <form action="">
+                  <input type="email" name="" placeholder="Enter your email" />
+                  <button>Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- subscribe section end --><br />
+    <!-- testimonal section start -->
+    <section class="client-section padding-layout" id="about">
+      <div class="container">
+        <div class="heading-container text-center">
+          <h2>Customer Testimonal</h2>
+        </div>
+      </div>
+      <div
+        id="client-testimonal"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="box col-lg-10 mx-auto">
+              <div class="img-container">
+                <div class="img-box">
+                  <div class="img-box-inner">
+                    <img
+                      src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/profile1.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="detail-box">
+                  <h5>Dharani Dharan</h5>
+                  <h6>Cloud-Engineer</h6>
+                  <p>
+                    Monitor site stability, deployments, performance via event
+                    logging and metrics (experience with monitoring services
+                    like Azure Log Analytics or products like Splunk) Create
+                    technical documents, diagrams, how-to guides, and other
+                    deliverables. Experience in Azure Tenant management.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="box col-lg-10 mx-auto">
+              <div class="img-container">
+                <div class="img-box">
+                  <div class="img-box-inner">
+                    <img
+                      src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/profile1.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="detail-box">
+                  <h5>Ajith</h5>
+                  <h6>web Developer</h6>
+                  <p>
+                    Responsible for planning and developing software solutions
+                    and web applications, supporting and maintaining a company's
+                    websites and digital products
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="box col-lg-10 mx-auto">
+              <div class="img-container">
+                <div class="img-box">
+                  <div class="img-box-inner">
+                    <img
+                      src="{{ url_for('static', filename='') }}bootstrap-5.3.2-dist/assets/image/profile1.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="detail-box">
+                  <h5>Ganapathy Raja</h5>
+                  <h6>Tester</h6>
+                  <p>
+                    Test and evaluate the performance of a site on the internet.
+                    In this role, you pretend to be a normal user, consider the
+                    design and usability of the site on your computer, and
+                    provide feedback on the site's performance.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#client-testimonal"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#client-testimonal"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- testimonal section end -->
+    <!-- footer section start -->
+    <section class="footer" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="footer-logo">
+              <a href="/">Zomaika</a>
+            </div>
+            <div class="information">
+              <p>
+                <strong>Address:</strong>Magic Bus, Medavakkam,chennai-600100
+              </p>
+              <p><strong>Telephone:</strong>+91-9238579343</p>
+              <p><strong>Email:</strong>Zomaika@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-7">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="widget-menu">
+                      <h3>Menu</h3>
+                      <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#product">Product</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="widget-menu">
+                      <h3>Account</h3>
+                      <ul>
+                        <li><a href="">Account</a></li>
+                        <li><a href="">Checkout</a></li>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/signup">Register</a></li>
+                        <li><a href="/product">Shopping</a></li>
+                        <li><a href="">Widget</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="widget-menu">
+                  <h3>Newsletter</h3>
+                  <div class="information">
+                    <p>Subscribe by our newsletter and get update protidin</p>
+                  </div>
+                  <div class="form_sub">
+                    <form>
+                      <fieldset>
+                        <div class="field">
+                          <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter Your Mail"
+                          />
+                          <input type="submit" value="subscribe" name="" />
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer section end -->
+    <!-- copy-right section start -->
+    <div class="copy-right">
+      <p>@ 2024 All Right Reserved By <a href="#">Zomaika</a></p>
+    </div>
+    <!-- copy-right section end -->
+
+    <!-- scripts -->
+
+    <script src="{{ url_for('static', filename='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="main.js"></script>
+    <!-- python_flask -->
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+
+    <!-- scripts -->
+  </body>
+</html>
