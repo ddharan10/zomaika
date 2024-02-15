@@ -31,9 +31,14 @@ Lakshanaiya Tester
 ## Azure Services Integration
 This project leverages various Azure services to ensure scalability, reliability, and performance.
 
-## Resource Group: Organizes and manages Azure resources efficiently.
-## Virtual Network: Provides a secure and isolated network environment for the project.
-## Web App: Hosts the e-commerce platform using Flask for the backend and HTML/CSS/JS for the frontend.
-## Virtual Network Integration: Ensures secure communication between the web app and other Azure resources.
-## Monitor: Monitors the performance and health of the application, helping in proactive issue resolution.
+## Resource Group: 
+Organizes and manages Azure resources efficiently.
+## Virtual Network: 
+Provides a secure and isolated network environment for the project.
+## Web App: 
+Hosts the e-commerce platform using Flask for the backend and HTML/CSS/JS for the frontend.
+## Virtual Network Integration:
+Ensures secure communication between the web app and other Azure resources.
+## Monitor: 
+Monitors the performance and health of the application, helping in proactive issue resolution.
 
