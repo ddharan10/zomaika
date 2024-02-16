@@ -78,9 +78,8 @@ Monitors the performance and health of the application, helping in proactive iss
 ![Screenshot 2024-02-16 140413](https://github.com/ddharan10/zomaika/assets/120146223/a86de0d5-4176-42d7-bbdf-40603d864e30)
 
 
-##videourl
-
+## videourl
+https://www.youtube.com/watch?v=kgsocGkT-nQ
 ## demourl
-
 https://zomaikaapp.azurewebsites.net/
 
